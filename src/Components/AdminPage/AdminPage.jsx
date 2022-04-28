@@ -9,7 +9,7 @@ export const AdminPage = () => {
   const [total, setTotal] = useState("");
 
   const calculateBill = () => {
-    let totalCost = cost * units;
+    let totalCost = (cost * units).toFixed(2);
     setTotal(totalCost);
     setCost("");
     setUnits("");
@@ -62,7 +62,7 @@ export const AdminPage = () => {
           <button onClick={calculateBill}>Calculate</button>
         </div>
         <div>
-          <h2>Total Cost:{total}</h2>
+          <h2>Total Cost: ₹{total}/-</h2>
         </div>
       </div>
       {/* // <Form /> */}
